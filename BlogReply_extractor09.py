@@ -93,24 +93,24 @@ def Sel_set_driver():
     #     save_user_agent(user_agent)
         
     
-    saved_user_agent = get_saved_user_agent()
+    # saved_user_agent = get_saved_user_agent()
 
-    # 이전에 user_agent가 저장되어 있고, 현재의 user_agent와 다르다면,
-    if saved_user_agent and saved_user_agent != user_agent:
-        messagebox.showerror(
-            "Error", "PC가 변경되었습니다. 새 라이선스가 필요합니다. 크롤링 크루에 문의하세요."
-        )
-        sys.exit("프로그램을 종료합니다.")  # 프로그램을 종료합니다.
+    # # 이전에 user_agent가 저장되어 있고, 현재의 user_agent와 다르다면,
+    # if saved_user_agent and saved_user_agent != user_agent:
+    #     messagebox.showerror(
+    #         "Error", "PC가 변경되었습니다. 새 라이선스가 필요합니다. 크롤링 크루에 문의하세요."
+    #     )
+    #     sys.exit("프로그램을 종료합니다.")  # 프로그램을 종료합니다.
 
-    # 처음 실행이거나 user_agent가 같다면, 현재 user_agent를 저장합니다.
-    if not saved_user_agent:
-        save_user_agent(user_agent)
-        messagebox.showerror(
-            "라이선스 등록 알림",
-            "사용하고 계신 PC가 등록되었습니다. 다른 PC에서는 사용이 제한됩니다."
-        )
-    time.sleep(2)
-    options.add_argument(f'user-agent={user_agent}')
+    # # 처음 실행이거나 user_agent가 같다면, 현재 user_agent를 저장합니다.
+    # if not saved_user_agent:
+    #     save_user_agent(user_agent)
+    #     messagebox.showerror(
+    #         "라이선스 등록 알림",
+    #         "사용하고 계신 PC가 등록되었습니다. 다른 PC에서는 사용이 제한됩니다."
+    #     )
+    # time.sleep(2)
+    # options.add_argument(f'user-agent={user_agent}')
     
     
     
