@@ -84,10 +84,9 @@ def Sel_set_driver():
     # options.add_argument('user-agent=' + user_agent)
     
     # 사용자의 실제 user_agent를 가져옵니다.
-    user_agent = (
-        webdriver.Chrome(options=options)
-        .execute_script("return navigator.userAgent;")
-    )
+    user_agent = webdriver.Chrome(options=options)
+
+   
     
     # if not os.path.exists(USER_AGENT_FILE_PATH):
     #     os.makedirs(USER_AGENT_FILE_PATH, exist_ok=True)
