@@ -1,0 +1,29 @@
+name: mombebe_mac
+
+on: push
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run:
+        python -m pip install --upgrade pip
+        pip install -r .github/workflows/requirements.txt
+
+    - name: run python file
+      run: python .github/workflows/BlogReply_extractor09.py
+
+    # - name: Upload artifact
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: macos-executable
+    #     path: dist/*  # PyInstaller가 실행 파일을 생성하는 폴더를 정확히 지정합니다.
