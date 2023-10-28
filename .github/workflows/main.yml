@@ -17,10 +17,10 @@ jobs:
     - name: Install dependencies
       run:
         pip install --upgrade pip
-        pip install -r .github/workflows/requirements.txt
+        pip install -r requirements.txt
 
     - name: run python file
-      run: python .github/workflows/BlogReply_extractor09.py
+      run: python BlogReply_extractor09.py
 
     # - name: Upload artifact
     #   uses: actions/upload-artifact@v2
