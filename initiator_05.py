@@ -21,7 +21,7 @@ import queue
 
 
 
-def is_admin():
+def is_admin2():
     try:
         # 관리자 권한으로 실행되고 있는지 확인합니다.
         return ctypes.windll.shell32.IsUserAnAdmin()
